@@ -8,12 +8,12 @@
  */
 class myClass {
     constructor() {
-        console.log("in constructor");
+        //console.log("in constructor");
         this._name = 'sweet child o mine';
     }
 
-    showMe(a) {
-        console.log("in showMe: " + a+3)        ;
+    add5(a) {
+        console.log('in parent.add5(' + a + '): ' + (a + 5) )        ;
     }
 
     get getName() {
@@ -38,6 +38,6 @@ class mySub extends myClass{
 }
 //console.log("nope");
 let obj = new mySub();
-obj.showMe(5);
+obj.add5(5);
 obj.getName;        //note property, not a function
 
