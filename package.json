@@ -11,7 +11,7 @@
   "repository": {
     "type": "git",
     "url": "git+https://github.com/longhorn09/learn.git"
-  }
+  },
   "author": "Norman Tang <norman@normstorm.com> (https://www.linkedin.com/in/normstorm/)",
   "license": "ISC",
   "devDependencies": {
