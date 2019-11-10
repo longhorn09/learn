@@ -13,12 +13,12 @@ class myClass {
     }
 
     add5(a) {
-        console.log('in parent.add5(' + a + '): ' + (a + 5) )        ;
+        console.log('in parent.add5(' + a + '): ' + (a + 5) );
     }
 
     get getName() {
         console.log('name property: '+ this._name);
-				return this._name;	
+		return this._name;	
     }
 
     set setName(str) {
