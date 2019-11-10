@@ -40,5 +40,5 @@ class mySub extends myClass{
 let obj = new mySub();
 obj.add5(5);
 obj.getName;        //note property, not a function
-obj.setName = 'new name';
+obj.setName = 'test new name';
 obj.getName;
