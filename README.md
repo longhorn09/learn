@@ -1,2 +1,2 @@
 # learn
-to help me learn javascript
+For purposes of learning IDE github environment setup, and learning javascript
