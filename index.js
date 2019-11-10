@@ -18,6 +18,7 @@ class myClass {
 
     get getName() {
         console.log('name property: '+ this._name);
+				return this._name;	
     }
 
     set setName(str) {
