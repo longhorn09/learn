@@ -1,43 +1,52 @@
 "use strict";
-/**
- * Parent class
- */
-class myClass {
-    constructor() {
-        //console.log("in constructor");
-        this._name = 'sweet child o mine';
-    }
 
-    add5(a) {
-        console.log('in parent.add5(' + a + '): ' + (a + 5) );
-    }
-
-    get getName() {
-        console.log('name property: '+ this._name);
-		return this._name;	
-    }
-
-    set setName(str) {
-        this._name = str;
-    }
+class BaseClass {
+  constructor() {}
 }
-/**
- * Subclass to explore inheritance
- */
-class mySub extends myClass{
-    constructor() {
-        super();
-    }
 
-    showBe(a) {
-        console.log("in showBe: " + a);
-    }
+class MyTest extends BaseClass {
+  constructor(){    
+    super();
+    //constructor placeholder for now
+  }
+
+  doStuff() {
+    let myprom = new Promise((resolve,reject) => {
+
+			//setTimeout(() => resolve("done"),1000);
+      setTimeout(() => reject(new Error("whoops!")),1000);
+    });
+
+    myprom.then(
+      (result) => {
+          console.log('in 1st then');
+          console.log(result);
+          return result;
+      },
+      (error) => {
+				console.log('in 1st error handler '+ error);
+				new Error("whoops 2");
+        return error;
+      }
+    ).then(
+      (result) => {
+        console.log('ok 2nd then');
+        console.log(result);
+        return result;
+      },
+      (error) => {
+        console.log('in 2nd error handler');
+        console.log(error);
+        return error;
+      },
+    );
+  }
 }
-//console.log("nope");
-(async () => {let obj = new mySub();
-    obj.add5(5);
-    obj.getName;        //note property, not a function
-    obj.setName = 'test new name';
-    obj.getName;
+
+// MAIN EXECUTION BEGINS HERE
+(()=>{
+  let a = new MyTest();
+  
+  a.doStuff();
+  console.log("subsequent execution");
 }) ();
-
