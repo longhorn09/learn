@@ -18,14 +18,14 @@ class MyTest extends BaseClass {
     });
 
     myprom.then(
-      (result) => {
+      (blah) => {
           console.log('in 1st then');
-          console.log(result);
-          return result;
+          console.log(blah);
+          return blah;
       },
       (error) => {
-				console.log('in 1st error handler '+ error);
-				new Error("whoops 2");
+				console.log('in 1st error handler: '+ error) ;
+				reject(new Error("whoops 2"));
         return error;
       }
     ).then(
@@ -35,8 +35,7 @@ class MyTest extends BaseClass {
         return result;
       },
       (error) => {
-        console.log('in 2nd error handler');
-        console.log(error);
+        console.log('in 2nd error handler: ' + error);
         return error;
       },
     );
