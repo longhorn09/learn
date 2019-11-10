@@ -8,6 +8,5 @@ git pull origin master --allow-unrelated-histories
 ```
 May need following if having issues with `git pull --all`
 ```
-git branch --set-upstream-to=origin/master master
 git branch --set-upstream-to origin/master
 ```
