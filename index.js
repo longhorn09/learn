@@ -1,9 +1,5 @@
 "use strict";
 /**
- *  Basic relearning of Javascript classes
- */
-
-/**
  * Parent class
  */
 class myClass {
@@ -38,8 +34,10 @@ class mySub extends myClass{
     }
 }
 //console.log("nope");
-let obj = new mySub();
-obj.add5(5);
-obj.getName;        //note property, not a function
-obj.setName = 'test new name';
-obj.getName;
+(async () => {let obj = new mySub();
+    obj.add5(5);
+    obj.getName;        //note property, not a function
+    obj.setName = 'test new name';
+    obj.getName;
+}) ();
+
