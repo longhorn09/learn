@@ -23,7 +23,7 @@ const willIGetNewPhone = new Promise(
 async function showOff(phone) {
     return new Promise(
         (resolve, reject) => {
-            var message = 'Hey friend, I have a new ${phone.color} ${phone.brand} phone';
+            var message = 'Hey friend, I have a new '+ phone.color + ' ' + phone.brand + ' phone';
             resolve(message);
         }
     );
@@ -48,3 +48,4 @@ async function askMom() {
 (async () => {
     await askMom();
 })();
+
